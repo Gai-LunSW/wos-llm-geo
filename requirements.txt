@@ -1,0 +1,7 @@
+openai>=1.0.0
+googlemaps
+tqdm
+pandas
+python-dotenv
+httpx
+tiktoken
