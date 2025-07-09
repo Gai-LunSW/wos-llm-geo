@@ -20,6 +20,16 @@ The library expects the following environment variables to be defined:
 A convenient way to set them is by creating a `.env` file in the project root. Values
 in this file will be loaded automatically if present.
 
+## Usage
+
+Use :func:`wos_geo.analyze_articles_batch` to obtain a DataFrame of article
+summaries. The function accepts an optional ``prompt_template`` parameter
+allowing you to customise how each summary is generated.
+
+Results can be written directly to an Excel file with
+``wos_geo.analyze_articles_to_excel`` which returns the path to the saved file.
+
+
 ## Running Tests
 
 Execute the test suite with coverage information using:

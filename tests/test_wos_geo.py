@@ -1,5 +1,3 @@
-import os, sys
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import pandas as pd
 import wos_geo
 
@@ -25,4 +23,12 @@ def test_geocode_locations_cache(monkeypatch):
     df = wos_geo.geocode_locations(["Paris", "Paris"])
     assert df.shape[0] == 2
     assert len(calls) == 1
+
+
+def test_analyze_articles_to_excel(tmp_path):
+    articles = ["foo", "bar"]
+    out_file = tmp_path / "out.xlsx"
+    path = wos_geo.analyze_articles_to_excel(articles, str(out_file))
+    assert path == str(out_file)
+    assert out_file.exists()
 
