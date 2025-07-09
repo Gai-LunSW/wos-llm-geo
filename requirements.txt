@@ -5,3 +5,5 @@ pandas
 python-dotenv
 httpx
 tiktoken
+pytest>=7.0
+pytest-cov
